@@ -101,8 +101,10 @@ body {
 			opacity: 1;
 		}
 		padding-top: 160px;
+		padding-bottom: 60px;
 		@media (max-width: 768px) {
 			padding-top: 80px;
+			padding-bottom: 20px;
 		}
 	}
 	&__episodes {
