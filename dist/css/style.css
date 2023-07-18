@@ -368,6 +368,7 @@ body._lock {
   opacity: 0;
   transition: all 0.3s ease 0s;
   padding-top: 160px;
+  padding-bottom: 60px;
 }
 .page__promo._anim {
   opacity: 1;
@@ -375,6 +376,7 @@ body._lock {
 @media (max-width: 768px) {
   .page__promo {
     padding-top: 80px;
+    padding-bottom: 20px;
   }
 }
 .page__episodes {

@@ -165,3 +165,26 @@ btnAllEpisodesSelector.addEventListener('click', e => {
 		btnAllEpisodesSelector.textContent = 'Hide all episodes';
 	}
 });
+//
+const subscribeFormSelector = document.querySelector('.subscribe__form');
+const nameFormSelector = document.getElementById('name');
+const emailIdFormSelector = document.getElementById('email_id');
+
+function sendMail(e) {
+	e.preventDefault();
+	const params = {
+		name: nameFormSelector.value,
+		email_id: emailIdFormSelector.value
+	};
+	const serviceId = 'service_rmrn4j9';
+	const templateID = 'template_pq9r7ri';
+	emailjs
+		.send(serviceId, templateID, params)
+		.then(res => {
+			nameFormSelector.value = '';
+			emailIdFormSelector.value = '';
+		})
+		.catch(e => console.log(e));
+}
+
+subscribeFormSelector.addEventListener('submit', e => sendMail(e));
